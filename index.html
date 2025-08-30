@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capping Ceremony 💉💖</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, #ffe6f0, #ffffff);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #ffccd5;
+      padding: 20px;
+      border-bottom: 5px solid #ffb3c1;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      margin: 0;
+      color: #d6336c;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav button {
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      margin: 5px;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    nav button:hover {
+      background: #d6336c;
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 40px 20px;
+      min-height: 80vh;
+    }
+
+    .letter, .messages {
+      max-width: 800px;
+      margin: auto;
+      background: #fff0f6;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: left;
+      line-height: 1.8;
+      padding: 20px;
+    }
+
+    .letter h2, .messages h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.2rem;
+      color: #c9184a;
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .msg-buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .msg-buttons button {
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      margin: 5px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .msg-buttons button:hover {
+      background: #c9184a;
+      transform: scale(1.05);
+    }
+
+    .message-text {
+      display: none;
+    }
+
+    .message-text.active {
+      display: block;
+      animation: fadeIn 0.8s;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    footer {
+      background: #ffccd5;
+      padding: 15px;
+      font-size: 0.9rem;
+      text-align: center;
+      color: #333;
+    }
+
+    /* Floating hearts animation */
+    .heart {
+      position: fixed;
+      bottom: -10px;
+      font-size: 24px;
+      color: #ff4d6d;
+      animation: floatUp 6s linear infinite;
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(0); opacity: 1; }
+      to { transform: translateY(-120vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Congratulations, My Love! 👩‍⚕️🎓</h1>
+    <nav>
+      <button onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">💌 Letter</button>
+      <button onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">📸 Gallery</button>
+      <button onclick="document.getElementById('messages').scrollIntoView({behavior:'smooth'})">🌸 Messages</button>
+    </nav>
+  </header>
+
+  <section id="letter" class="letter">
+    <h2>My Dearest Nurse 💌</h2>
+    <p>
+      Today, as you wear that cap with pride, I want you to know how deeply proud I am of you. 
+      This ceremony is not just a symbol of your hard work and sleepless nights—it’s a reminder of your dedication, compassion, and strength.  
+    </p>
+    <p>
+      You’ve faced challenges, sacrifices, and long hours, but you never gave up. 
+      Seeing you in your uniform, I see not just a nurse, but the woman I love—kind, selfless, and beautiful inside and out.  
+    </p>
+    <p>
+      I’ll always be by your side, cheering for you in every step of your journey. 
+      This is just the beginning of the amazing nurse and woman you’re becoming.  
+    </p>
+    <p>
+      With all my love,  
+      <br>
+      <strong>— Benot 💖</strong>
+    </p>
+  </section>
+
+  <section id="gallery">
+    <h2 style="text-align:center; font-family:'Great Vibes', cursive; font-size:2rem; color:#c9184a;">Student Nurse 📸</h2>
+    <div class="gallery">
+      <img src="IMG_5640 copy.jpg" alt="Nursing Cap">
+      <img src="photo_6165907633878463002_y.jpg" alt="Nursing Uniform">
+      <img src="photo_6165907633878462999_y.jpg" alt="Capping Ceremony">
+      <img src="images/yourgf.jpg" alt="Your Girlfriend">
+    </div>
+  </section>
+
+  <section id="messages" class="messages">
+    <h2>Special Messages for You 🌸</h2>
+    <div class="msg-buttons">
+      <button onclick="showMessage(1)">Letter 1</button>
+      <button onclick="showMessage(2)">Letter 2</button>
+      <button onclick="showMessage(3)">Letter 3</button>
+      <button onclick="showMessage(4)">Letter 4</button>
+      <button onclick="showMessage(5)">Letter 5</button>
+    </div>
+
+    <div id="msg1" class="message-text active">
+      <p>My Love,<br>
+      Today I saw you wearing that cap and I couldn’t stop smiling. It’s not just a piece of fabric, it’s a crown — a symbol of every sleepless night, every early morning, every tear you wiped away in silence. You’ve proven not only your strength, but also your heart. I am endlessly proud of the nurse you’re becoming, and even more proud of the person you already are.</p>
+      <p>Always yours,<br>— Your biggest fan</p>
+    </div>
+
+    <div id="msg2" class="message-text">
+      <p>Sweetheart,<br>
+      As you stand there in your white uniform, I can’t help but think about all the sacrifices you’ve made to reach this day. Nursing isn’t just a course, it’s a calling — and you were meant for it. Your compassion, your patience, and your love for others are what make you shine. I know this is just the beginning, and I’ll be here cheering for you in every step of your journey.</p>
+      <p>With all my love,<br>— Forever with you</p>
+    </div>
+
+    <div id="msg3" class="message-text">
+      <p>My Dearest,<br>
+      I’ve always admired your strength, but today you’ve inspired me even more. Seeing you at your capping ceremony reminded me why I fell in love with you — your determination, your kindness, and your ability to keep going no matter how tough it gets. You don’t just wear that cap, you wear it with dignity, grace, and heart.</p>
+      <p>Proudly yours,<br>— Always beside you</p>
+    </div>
+
+    <div id="msg4" class="message-text">
+      <p>Honey,<br>
+      Today, you didn’t just wear your cap — you wore my heart. Because when I look at you, I see not just a student nurse, but the woman I want to cheer for all my life. Nursing is a tough path, but you’ve walked it with courage. No words will ever be enough to say how proud I am.</p>
+      <p>Yours forever,<br>— With love</p>
+    </div>
+
+    <div id="msg5" class="message-text">
+      <p>Love,<br>
+      This ceremony is a milestone, but to me, you’ve always been a nurse — someone who heals with a smile, comforts with a hug, and loves with a pure heart. That cap is just proof of what I already knew: you were born to care, to serve, and to inspire. I thank God every day that I get to love someone as amazing as you.</p>
+      <p>Always in my heart,<br>— Your forever love</p>
+    </div>
+  </section>
+
+  <footer id="footer">
+    Made with 💖 for my one and only Nurse. Forever proud of you!
+  </footer>
+
+  <script>
+    // Floating hearts
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "❤️";
+      heart.style.left = Math.random() * window.innerWidth + "px";
+      heart.style.animationDuration = (Math.random() * 3 + 4) + "s"; 
+      document.body.appendChild(heart);
+
+      setTimeout(() => { heart.remove(); }, 6000);
+    }
+    setInterval(createHeart, 1000);
+
+    // Switch messages
+    function showMessage(num) {
+      const messages = document.querySelectorAll('.message-text');
+      messages.forEach(m => m.classList.remove('active'));
+      document.getElementById('msg' + num).classList.add('active');
+    }
+  </script>
+</body>
+</html>
